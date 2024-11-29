@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>assignment 3.js</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div
+      class="d-flex justify-content-center align-items-center accordion py-5 my-2"
+    >
+      <h1 class="display-4 fw-medium">Bookmarker</h1>
+    </div>
+    <div class="container">
+      <div class="form position-relative d-flex p-5 flex-column">
+        <div
+          id="sweetAlertWindow"
+          class="sweet-alert d-none text-dark rounded-5 bg-light"
+        >
+          <i class="fa-regular fa-futbol ps-2 mt-2 text-danger fs-2"></i>
+          <i class="fa-regular fa-futbol ps-2 mt-2 text-warning fs-2"></i>
+          <i class="fa-regular fa-futbol ps-2 mt-2 text-success fs-2"></i>
+          <button
+            type="button"
+            onclick="closeAlert()"
+            class="btn-close position-absolute"
+            aria-label="Close"
+          ></button>
+          <div
+            class="d-flex flex-column justify-content-center align-items-center"
+          >
+            <span class="mt-4 fw-bolder fs-5">
+              Site Name or Url is not valid, Please follow the rules below :
+            </span>
+            <div class="mt-4">
+              <p class="fw-bold fs-5">
+                <i class="fa-regular text-warning fa-circle-right p-2"></i>Site
+                name must contain at least 3 characters
+              </p>
+              <p class="fw-bold fs-5">
+                <i class="fa-regular text-warning fa-circle-right p-2"></i>Site
+                URL must be a valid one
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex mb-4 justify-content-center align-items-center">
+          <i class="fa-solid fa-bookmark fs-2 text-warning"></i>
+          <h2 class="m-2 fw-medium">Bookmark your favorite sites</h2>
+          <i class="fa-solid fa-bookmark fs-2 text-warning"></i>
+        </div>
+        <label for="nameSite">
+          <i class="fa-solid fa-book-bookmark pe-2"></i>
+          Site Name
+        </label>
+        <input
+          type="text"
+          class="form-control fw-medium mt-2 mb-3"
+          id="nameSite"
+          placeholder="Bookmark Name"
+        />
+        <div id="sweetAlert" class="alert alert-danger d-none" role="alert">
+          Site name must contain at least 3 characters
+        </div>
+        <label for="urlInput">
+          <i class="fa-solid fa-link pe-2"></i>
+          Site URL
+        </label>
+        <input
+          type="text"
+          class="form-control fw-medium mt-2 mb-3"
+          id="urlInput"
+          placeholder="Website Name"
+        />
+
+        <div id="urlBelow" class="alert alert-info d-none" role="alert">
+          Site URL must be a valid one
+        </div>
+        <div class="text-center mt-4">
+          <button
+            type="button"
+            onclick="addSite()"
+            class="btn btn-warning fw-bold py-2 px-5"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="d-flex w-100 bg-white text-dark fw-bold mt-5 mb-5 py-3">
+        <div class="container">
+          <div class="row gy-1">
+            <div
+              class="col-lg-3 col-md-6 d-flex flex-column justify-content-center align-items-center"
+            >
+              index
+            </div>
+            <div
+              class="col-lg-3 col-md-6 d-flex flex-column justify-content-center align-items-center"
+            >
+              Website Name
+            </div>
+            <div
+              class="col-lg-3 col-md-6 d-flex flex-column justify-content-center align-items-center"
+            >
+              Visit
+            </div>
+            <div
+              class="col-lg-3 col-md-6 d-flex flex-column justify-content-center align-items-center"
+            >
+              Delete
+            </div>
+          </div>
+          <div id="newRow" class="row gy-2"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

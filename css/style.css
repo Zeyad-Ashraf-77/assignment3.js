@@ -1,0 +1,60 @@
+body {
+  background-color: #f5e4cf;
+  color: black;
+}
+
+.form-control:focus {
+  border-color: #eb0000;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(220, 3, 3, 0.406);
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  position: relative;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  height: 45%;
+  width: 100%;
+  background-color: rgb(255, 221, 0);
+  top: 50%;
+  left: 0;
+  z-index: -1;
+}
+h2 {
+  position: relative;
+}
+h2::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 70%;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: red;
+  box-shadow: 7px 6px 10px red;
+}
+
+.form {
+  border-top: 2px dotted rgb(0, 0, 0);
+  border-bottom: 2px dotted rgb(0, 0, 0);
+}
+
+.sweet-alert {
+  width: 40%;
+  height: 60%;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  z-index: 10111;
+}
+
+.sweet-alert .btn-close {
+  left: 90%;
+}
